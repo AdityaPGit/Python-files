@@ -16,7 +16,7 @@ def minimax(depth, nodeIndex, maximizingPlayer, values, alpha, beta):
     else:
         best = MAX
         for i in range(0, 2):
-            val = minimax(depth + 1, nodeIndex * 2 + i, False, values, alpha, beta)
+            val = minimax(depth + 1, nodeIndex * 2 + i, True, values, alpha, beta)
             best = min(best, val)
             beta = min(beta, best)
             if beta <= alpha:
